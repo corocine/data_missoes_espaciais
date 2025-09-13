@@ -3,6 +3,7 @@ from src.utils.variables import LOGO_DIR
 from src.utils.load_data import load_data
 from src.components.filters import show_filters
 from src.components.filters import show_record_count
+from src.components.metrics import show_metrics
 
 def main():
     """
@@ -15,6 +16,9 @@ def main():
         layout='wide',
         menu_items= None               
     ) 
+    
+    st.title('Análise descritiva de missões espaciais')
+    st.write('Essa análise detalha os lançamentos das missões espaciais realizadas no período de 1957 até 2022')
     
     df = load_data()
     
@@ -29,6 +33,9 @@ def main():
         st.stop()
         
     show_record_count(df_filtred)
+    show_metrics(df_filtred)
+    
+    
 
     st.dataframe(df_filtred)
     

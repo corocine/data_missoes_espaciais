@@ -15,7 +15,7 @@ df['Company'] = df['Company'].astype('category')
 df['Country'] = df['Location'].str.split(',').str[-1].str.strip()
 df['Country'] = df['Country'].astype('category')
 df['Price'] = df['Price'].str.replace(',', '', regex=False)
-df['Price'] = df['Price'].astype(float)
+df['Price'] = df['Price'].astype(float) * 1000000
 df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
 df['Year'] = df['Date'].dt.year
 df['Date'] = df['Date'].dt.date
