@@ -16,7 +16,6 @@ def show_metrics(df: pd.DataFrame):
     total_records = len(df)
     available_percentage = (records_with_price / total_records) * 100
     
-    
     col1, col2, col3, col4, col5 = st.columns([0.2, 0.1, 0.1, 0.15, 0.2])
     
     with col1:

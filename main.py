@@ -4,6 +4,10 @@ from src.utils.load_data import load_data
 from src.components.filters import show_filters
 from src.components.filters import show_record_count
 from src.components.metrics import show_metrics
+from src.components.charts.rockets_launches_by_country_chart import rockets_launches_by_country_chart
+from src.components.charts.status_mission_chart import status_mission_chart
+from src.components.charts.company_launches import company_launches_chart
+
 
 def main():
     """
@@ -33,10 +37,24 @@ def main():
         st.stop()
         
     show_record_count(df_filtred)
+    
     show_metrics(df_filtred)
     
+    col1, col2 = st.columns([0.6, 0.4])
     
-
+    with col1:
+        status_mission_chart(df_filtred)
+    
+    with col2:
+        company_launches_chart(df_filtred)
+        
+    st.markdown('---')
+    
+    rockets_launches_by_country_chart(df_filtred)
+    
+    
+    
+    st.markdown('---')
     st.dataframe(df_filtred)
     
     
