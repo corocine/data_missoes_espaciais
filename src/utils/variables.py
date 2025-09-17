@@ -7,7 +7,7 @@ PARQUET_PATH = BASE_DIR / 'data' / "space_missions.parquet"
 CSV_DIR = BASE_DIR / 'data' / 'space_missions.csv'
 
 
-PRIMARY_COLOR      = "#0D47A1"  # azul bem escuro
+PRIMARY_COLOR      = "#0D47A1"  
 SECONDARY_COLOR    = "#1565C0"
 TERTIARY_COLOR     = "#1976D2"
 QUATERNARY_COLOR   = "#1E88E5"
@@ -16,7 +16,7 @@ SENARY_COLOR       = "#42A5F5"
 SEPTENARY_COLOR    = "#64B5F6"
 OCTONARY_COLOR     = "#90CAF9"
 NONARY_COLOR       = "#BBDEFB"
-DENARY_COLOR       = "#E3F2FD"  # azul quase branco
+DENARY_COLOR       = "#E3F2FD" 
 
 SCALE_COLOR_MAP = 'Blues'
 
