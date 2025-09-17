@@ -22,6 +22,9 @@ def company_launches_chart(df: pd.DataFrame):
         color_discrete_sequence=CATEGORIES_COLORS,
         labels={'Empresa': 'Empresa', 'Missao': 'Número de missões'},
         )
+    fig.update_traces(
+        hovertemplate="<b>%{label}</b><br><br><b>Nº de Missões:</b> %{value}<br><b>Percentual:</b> %{percent}<extra></extra>"
+    )
     
     st.plotly_chart(fig, use_container_width=True)
     

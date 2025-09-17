@@ -1,4 +1,5 @@
 from pathlib import Path
+import plotly.express as px
 
 BASE_DIR = Path.cwd()
 LOGO_DIR = BASE_DIR / 'data' / 'logo.ico'
@@ -6,12 +7,16 @@ PARQUET_PATH = BASE_DIR / 'data' / "space_missions.parquet"
 CSV_DIR = BASE_DIR / 'data' / 'space_missions.csv'
 
 
-PRIMARY_COLOR   = "#0F90DB" 
-SECONDARY_COLOR = "#1565C0"  
-TERTIARY_COLOR  = "#1E88E5" 
-QUATERNARY_COLOR = "#42A5F5"
-QUINARY_COLOR   = "#90CAF9" 
-SENARY_COLOR    = "#E3F2FD"
+PRIMARY_COLOR      = "#0D47A1"  # azul bem escuro
+SECONDARY_COLOR    = "#1565C0"
+TERTIARY_COLOR     = "#1976D2"
+QUATERNARY_COLOR   = "#1E88E5"
+QUINARY_COLOR      = "#2196F3"
+SENARY_COLOR       = "#42A5F5"
+SEPTENARY_COLOR    = "#64B5F6"
+OCTONARY_COLOR     = "#90CAF9"
+NONARY_COLOR       = "#BBDEFB"
+DENARY_COLOR       = "#E3F2FD"  # azul quase branco
 
 SCALE_COLOR_MAP = 'Blues'
 
@@ -21,5 +26,9 @@ CATEGORIES_COLORS = [
     TERTIARY_COLOR,
     QUATERNARY_COLOR,
     QUINARY_COLOR,
-    SENARY_COLOR
+    SENARY_COLOR,
+    SEPTENARY_COLOR,
+    OCTONARY_COLOR,
+    NONARY_COLOR,
+    DENARY_COLOR,
 ]

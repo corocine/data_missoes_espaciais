@@ -40,7 +40,7 @@ def mission_costs(df: pd.DataFrame):
         
         fig_top_10_costs.update_traces(
             textinfo='value', 
-            hovertemplate='<b>%{customdata[0]}</b><br><b>Status da Missão:</b> %{customdata[2]}<br>Ano de Lançamento: %{customdata[1]}<br><extra></extra>'
+            hovertemplate='<b>%{customdata[0]}</b><br><b>Status da Missão:</b> %{customdata[2]}<br><b>Ano de Lançamento:</b> %{customdata[1]}<br><extra></extra>'
         )
         
             
@@ -71,7 +71,7 @@ def mission_costs(df: pd.DataFrame):
         
         fig_top_10_costs_nsmallest.update_traces(
             textinfo='value', 
-            hovertemplate='<b>%{customdata[0]}</b><br><b>Status da Missão:</b> %{customdata[2]}<br>Ano de Lançamento: %{customdata[1]}<br><extra></extra>'
+            hovertemplate='<b>%{customdata[0]}</b><br><b>Status da Missão:</b> %{customdata[2]}<br><b>Ano de Lançamento:</b> %{customdata[1]}<br><extra></extra>'
         )
             
         st.plotly_chart(fig_top_10_costs_nsmallest, use_container_width=True, key='fig_top_10_costs_nsmallest')
