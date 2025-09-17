@@ -27,10 +27,14 @@ def launches_by_year(df: pd.DataFrame):
             'Numero de Lancamentos': 'Número de Lançamentos', 
             'RegiaoLancamento': 'Região'
         },
+        custom_data=['RegiaoLancamento']
     )
     
     fig_launches_by_year.update_layout(
         legend_title_text='Região de Lançamento'
+    )
+    fig_launches_by_year.update_traces(
+        hovertemplate="<b>%{customdata[0]}</b><br><b>Ano:</b> %{x}<br><b>Nº de Lançamentos:</b> %{y}<extra></extra>"
     )
     
     st.plotly_chart(fig_launches_by_year, use_container_width=True, key="fig_launches_by_year")

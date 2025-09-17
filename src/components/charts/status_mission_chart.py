@@ -26,7 +26,7 @@ def status_mission_chart(df: pd.DataFrame):
              
     fig_sunburst.update_traces(
         textinfo='label+percent parent', 
-        hovertemplate='<b>%{label}</b><br>Nº de Missões: %{value}<br>Percentual do Anel Anterior: %{percentParent:.1%}<extra></extra>'
+        hovertemplate='<b>%{label}</b><br><b>Status da Missão:</b> %{parent}<br><b>Nº de Missões:</b> %{value}<br><b>Percentual:</b> %{percentParent:.1%}<extra></extra>'
     )
             
     fig_sunburst.update_layout(

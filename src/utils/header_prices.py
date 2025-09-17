@@ -30,8 +30,8 @@ def header_prices(df: pd.DataFrame):
     total_records = len(df)
     available_percentage = (records_with_price / total_records) * 100
     message = f"""
-            Este valor é a soma dos custos de apenas {records_with_price} missões
-            ({available_percentage:.1f}% do total), que são as que possuem dados de preço disponíveis.
+            Este valor corresponde à soma dos custos de apenas {records_with_price} missões
+            ({available_percentage:.1f}% do total), que possuem dados de preço disponíveis. 
             O gasto total real de todas as missões é consideravelmente maior.
             """
     result = {
